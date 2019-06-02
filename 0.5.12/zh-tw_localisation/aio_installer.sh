@@ -23,6 +23,9 @@ curl -o /system/etc/fonts.xml https://raw.githubusercontent.com/eFiniLan/openpil
 # 設定字型設定檔權限
 chmod 644 /system/etc/fonts.xml && \
 
+# 加載回可讀模式
+mount -o remount,ro /system && \
+
 # Android 端設定成中文介面 (zh-TW = 繁中, zh-CN = 简中)
 setprop persist.sys.locale zh-TW && \
 
